@@ -1,9 +1,9 @@
 const recipes = [
   {
-    "name": "Flemmenkueche",
-    "lowerCaseName": "flemmenkueche",
-    "key": 1,
-    "ingredients": [
+    name: "Flemmenkueche",
+    lowerCaseName: "flemmenkueche",
+    key: 1,
+    ingredients: [
       [1, "pâte à pizza"],
       [1, "pâte feuilletée"],
       [150, "gr lardons"],
@@ -13,8 +13,8 @@ const recipes = [
       ["Sel"],
       ["Muscade"],
     ],
-    "basePersonsIngredients": 2,
-    "recipe": [
+    basePersonsIngredients: 2,
+    recipe: [
       "Préchauffer le four selon les instructions de cuisson de la pâte",
       "Mettre la pâte dans le moule en laissant le papier de cuisson",
       "Piquer la pâte",
@@ -25,10 +25,10 @@ const recipes = [
       "Enfourner selon les instructions de cuisson",
       "Accompagnement recommandé : salade",
     ],
-    "temperature": "Chaud",
-    "isVegetarian": false,
-    "isQuick": true,
-    "isTuppable": false,
+    temperature: "Chaud",
+    isVegetarian: false,
+    isQuick: true,
+    isTuppable: false,
   },
   {
     name: "Soupe déglincoco",
@@ -79,6 +79,31 @@ const recipes = [
       "Assaisonner",
     ],
     temperature: "Chaud",
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: true,
+  },
+  {
+    name: "Riz cantonnais",
+    lowerCaseName: "rizcantonnais",
+    key: 4,
+    ingredients: [
+      [120, "gr de riz thaï (ou basmati)"],
+      [1, "oignon"],
+      [2, "oeufs"],
+      ["Petits pois"],
+      ["Jambon ou lardons"],
+    ],
+    basePersonsIngredients: "2",
+    recipe: [
+      "Battre les oeufs et faire une omelette bien cuite - réserver",
+      "Emincer l'oignon et le cuire",
+      "Mettre à cuire le riz",
+      "Ajouter les lardons ou le jambon découpé",
+      "Ajouter les petits pois",
+      "Egoutter et ajouter le riz",
+      "Assaisonner",
+    ],
     isVegetarian: false,
     isQuick: false,
     isTuppable: true,
