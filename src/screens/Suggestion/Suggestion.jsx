@@ -7,7 +7,7 @@ export default function Suggestion() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [currentIngredient, setCurrentIngredient] = useState("");
-  const [persons, setPersons] = useState(0)
+  const [persons, setPersons] = useState(0);
   const [steps, setSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState("");
   const [vegetarian, setVegetarian] = useState(false);
@@ -58,8 +58,8 @@ export default function Suggestion() {
     newJson.lowerCaseName = title.toLowerCase().split(" ").join("");
     newJson.key = recipes.length + 1;
     newJson.ingredients = ingredients;
-    newJson.basePersonsIngredients = persons
-    newJson.recipe = steps
+    newJson.basePersonsIngredients = persons;
+    newJson.recipe = steps;
 
     if (vegetarian) {
       newJson.isVegetarian = true;
@@ -78,6 +78,9 @@ export default function Suggestion() {
     }
 
     setJson(JSON.stringify(newJson));
+
+    navigator.clipboard.writeText(json);
+    alert("Recette ajoutée dans le presse papiers !");
   };
 
   return (
