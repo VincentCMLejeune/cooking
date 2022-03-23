@@ -1,0 +1,7 @@
+@import '../../Fonts.css';
+
+.recipesContainer {
+  color: green;
+  display: flex;
+  flex-direction: column;
+}
