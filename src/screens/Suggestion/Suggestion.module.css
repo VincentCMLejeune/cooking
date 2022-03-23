@@ -1,0 +1,18 @@
+@import "../../Fonts.css";
+
+.suggestionContainer {
+  color: black;
+}
+
+.jsonToCopy {
+  background-color: gainsboro;
+  padding: 10px;
+}
+
+.ingredientOption {
+  display: flex;
+}
+
+.stepsOption {
+  display: flex;
+}

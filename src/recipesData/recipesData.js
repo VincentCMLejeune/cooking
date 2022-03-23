@@ -1,9 +1,9 @@
 const recipes = [
   {
-    name: "Flemmenkueche",
-    lowerCaseName: "flemmenkueche",
-    key: 1,
-    ingredients: [
+    "name": "Flemmenkueche",
+    "lowerCaseName": "flemmenkueche",
+    "key": 1,
+    "ingredients": [
       [1, "pâte à pizza"],
       [1, "pâte feuilletée"],
       [150, "gr lardons"],
@@ -13,8 +13,8 @@ const recipes = [
       ["Sel"],
       ["Muscade"],
     ],
-    basePersonsIngredients: 2,
-    recipe: [
+    "basePersonsIngredients": 2,
+    "recipe": [
       "Préchauffer le four selon les instructions de cuisson de la pâte",
       "Mettre la pâte dans le moule en laissant le papier de cuisson",
       "Piquer la pâte",
@@ -25,10 +25,10 @@ const recipes = [
       "Enfourner selon les instructions de cuisson",
       "Accompagnement recommandé : salade",
     ],
-    temperature: "Chaud",
-    isVegetarian: false,
-    isQuick: true,
-    isTuppable: false,
+    "temperature": "Chaud",
+    "isVegetarian": false,
+    "isQuick": true,
+    "isTuppable": false,
   },
   {
     name: "Soupe déglincoco",
