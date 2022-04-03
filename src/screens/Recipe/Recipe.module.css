@@ -1,5 +1,43 @@
-@import '../../Fonts.css';
+@import "../../Fonts.css";
 
 .recipeContainer {
-  color: purple;
+  background-color: var(--pink);
+  width: 80vw;
+  padding: 25px 50px;
+  margin: 0 auto;
+}
+
+.recipeContainer h1 {
+  font-size: x-large;
+  text-align: center;
+}
+
+.recipeDetails {
+  width: 45vw;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.recipeDetails img {
+  height: 15px;
+  margin-right: 5px;
+}
+
+.recipeIngredientsAndProcess {
+  display: flex;
+}
+
+.recipeIngredientsAndProcess h2 {
+  text-align: center;
+}
+
+.recipeIngredients {
+  width: 20vw;
+  margin: 0;
+}
+
+.recipeProcess {
+  width: 60vw;
+  margin: 0;
 }
