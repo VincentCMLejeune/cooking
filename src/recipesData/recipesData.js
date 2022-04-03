@@ -26,12 +26,9 @@ const recipes = [
       "Accompagnement recommandé : salade",
     ],
     temperature: "Chaud",
-    // isVegetarian: false,
-    // isQuick: false,
-    // isTuppable: false,
-    isVegetarian: true,
-    isQuick: true,
-    isTuppable: true,
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: false,
   },
   {
     name: "Soupe déglincoco",
@@ -97,7 +94,7 @@ const recipes = [
       ["Petits pois"],
       ["Jambon ou lardons"],
     ],
-    basePersonsIngredients: "2",
+    basePersonsIngredients: 2,
     recipe: [
       "Battre les oeufs et faire une omelette bien cuite - réserver",
       "Emincer l'oignon et le cuire",
@@ -128,7 +125,7 @@ const recipes = [
       ["sel"],
       ["poivre"],
     ],
-    basePersonsIngredients: "4",
+    basePersonsIngredients: 4,
     recipe: [
       "Préchauffer le four à 180°C (thermostat 6).",
       "Hacher l'oignon et l'ail.",
@@ -152,7 +149,7 @@ const recipes = [
       ["Laurier ou thym"],
       ["Parmesan"],
     ],
-    basePersonsIngredients: "4",
+    basePersonsIngredients: 4,
     recipe: [
       "Hacher les gousses d'ail",
       "Faire revenir l'ail avec de l'huile",
@@ -177,7 +174,7 @@ const recipes = [
       [200, "gr pâtes complètes"],
       [20, "cl crème liquide"],
     ],
-    basePersonsIngredients: "2",
+    basePersonsIngredients: 2,
     recipe: [
       "Lameliser les oignons",
       "Cuire les oignons",
