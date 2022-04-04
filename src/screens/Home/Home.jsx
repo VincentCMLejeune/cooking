@@ -9,7 +9,7 @@ export default function Home() {
   const [index, setIndex] = useState();
 
   useEffect(() => {
-    const randomIndex = Math.ceil(Math.random() * recipes.length);
+    const randomIndex = Math.ceil(Math.random() * (recipes.length - 2));
     setIndex(randomIndex);
   }, []);
 
