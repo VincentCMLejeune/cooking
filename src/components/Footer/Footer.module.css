@@ -1,0 +1,25 @@
+@import "../../Fonts.css";
+
+.footer {
+  background-color: var(--orchid);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  width: 98vw;
+  padding-left: 2vw;
+  position: fixed;
+  bottom: 0;
+}
+.footer button {
+  font-size: 18px;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 25px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+.footer button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+@import "../../Fonts.css";
+
+.banner {
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  height: 48px;
+  width: 95vw;
+  padding-left: 5vw;
+  color: red;
+}
+
+.boxContainer {
+  display: flex;
+}
+
+.boxContainer .box {
+  color: black;
+  font-weight: 800;
+  height: 48px;
+  width: 150px;
+}

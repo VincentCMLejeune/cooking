@@ -13,9 +13,6 @@ export default function Header() {
       <Link to="/recipes">
         <div>Toutes les recettes</div>
       </Link>
-      <Link to="/suggestion">
-        <div>Ajouter une recette</div>
-      </Link>
     </div>
   );
 }
