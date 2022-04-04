@@ -1,7 +1,23 @@
-@import '../../Fonts.css';
+@import "../../Fonts.css";
 
 .ingredientsContainer {
   width: 20vw;
   margin: 0;
   border: 1px solid red;
+}
+
+.personList {
+  display: flex;
+  width: 20vw;
+  justify-content: center;
+}
+
+.personPicture {
+  width: 20px;
+  height: 20px;
+}
+
+.ingredientsError {
+  color: white;
+  background-color: red;
 }
