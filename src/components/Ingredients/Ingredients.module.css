@@ -1,0 +1,7 @@
+@import '../../Fonts.css';
+
+.ingredientsContainer {
+  width: 20vw;
+  margin: 0;
+  border: 1px solid red;
+}
