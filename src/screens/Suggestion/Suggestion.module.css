@@ -2,6 +2,7 @@
 
 .suggestionContainer {
   color: black;
+  margin-bottom: 32px;
 }
 
 .jsonToCopy {
