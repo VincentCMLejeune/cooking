@@ -102,6 +102,7 @@ export default function Suggestion() {
         type="text"
         value={currentIngredient}
         onChange={(e) => setCurrentIngredient(e.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && addIngredient()}
       />
       <button onClick={addIngredient}>Ajouter</button>
       {ingredients.map((ingredient, index) => (
@@ -111,7 +112,7 @@ export default function Suggestion() {
         </div>
       ))}
       <br />
-      <label>Nommbre de personnes</label>
+      <label>Nombre de personnes</label>
       <br />
       <input
         className={styles.optionText}
@@ -127,6 +128,7 @@ export default function Suggestion() {
         type="text"
         value={currentStep}
         onChange={(e) => setCurrentStep(e.target.value)}
+        onKeyDown={(e) => e.key === "Enter" && addStep()}
       />
       <button onClick={addStep}>Ajouter</button>
       {steps.map((ingredient, index) => (
