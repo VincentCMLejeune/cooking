@@ -186,6 +186,32 @@ const recipes = [
     isQuick: false,
     isTuppable: true,
   },
+  {
+    name: "Toasts au pesto",
+    lowerCaseName: "toastsaupesto",
+    key: 8,
+    ingredients: [
+      [0.5, "baguette"],
+      ["Pesto"],
+      [1, "boule de mozzarella"],
+      ["Copeaux de parmesan"],
+      ["Huile"],
+      ["Sel poivre"],
+    ],
+    basePersonsIngredients: 2,
+    recipe: [
+      "Couper des fines tranches de pain (environ 2cm)",
+      "Verser un filet d'huile sur les tranches",
+      "Ajouter une tranche de mozzarelle sur chaque tranche de pain",
+      "Tartiner du pesto sur la mozzarella",
+      "Ajouter les copeaux de parmesan",
+      "Saler poivrer (léger)",
+      "Sur une plaque avec du papier sulfurisé, enfourner 10mn à 180° (four préchauffé)",
+    ],
+    isVegetarian: true,
+    isQuick: true,
+    isTuppable: false,
+  },
 ];
 
 module.exports = { recipes };
