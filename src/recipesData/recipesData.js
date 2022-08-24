@@ -34,6 +34,7 @@ const recipes = [
     name: "Soupe déglincoco",
     lowerCaseName: "soupedeglincoco",
     key: 2,
+    illustration: "../../assets/recipes/soupeDeglincoco.jpg",
     ingredients: [
       [1, "patate douce"],
       [1, "poireau ou oignon"],

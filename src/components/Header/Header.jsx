@@ -10,6 +10,7 @@ export default function Header() {
       <Link to="/">
         <img src={pizzaLogo} className={styles.headerLogo} alt="Logo" />
       </Link>
+      <h1>LES RECETTES DU OINK</h1>
       <Link to="/recipes">
         <div>Toutes les recettes</div>
       </Link>
