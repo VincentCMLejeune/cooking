@@ -58,7 +58,7 @@ export default function Suggestion() {
     newJson.lowerCaseName = title.toLowerCase().split(" ").join("");
     newJson.key = recipes.length + 1;
     newJson.ingredients = ingredients;
-    newJson.basePersonsIngredients = persons;
+    newJson.basePersonsIngredients = Number(persons);
     newJson.recipe = steps;
 
     if (vegetarian) {
