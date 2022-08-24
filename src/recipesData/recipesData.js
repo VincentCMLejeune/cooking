@@ -34,7 +34,6 @@ const recipes = [
     name: "Soupe déglincoco",
     lowerCaseName: "soupedeglincoco",
     key: 2,
-    illustration: "../../assets/recipes/soupeDeglincoco.jpg",
     ingredients: [
       [1, "patate douce"],
       [1, "poireau ou oignon"],
@@ -140,7 +139,7 @@ const recipes = [
   },
   {
     name: "Penne all'Arrabbiata",
-    lowerCaseName: "penneall'arrabbiata",
+    lowerCaseName: "penneallarrabbiata",
     key: 6,
     ingredients: [
       [400, "gr de penne"],
@@ -167,7 +166,7 @@ const recipes = [
   },
   {
     name: "Pâtes au chorizo",
-    lowerCaseName: "pâtesauchorizo",
+    lowerCaseName: "patesauchorizo",
     key: 7,
     ingredients: [
       ["Une plaquette de chorizo"],
@@ -294,7 +293,7 @@ const recipes = [
   },
   {
     name: "Dip de fêta et tomates rôties",
-    lowerCaseName: "dipdefêtaettomatesrôties",
+    lowerCaseName: "dipdefetaettomatesroties",
     key: 12,
     ingredients: [
       [1, "paquet de tomates cerises"],

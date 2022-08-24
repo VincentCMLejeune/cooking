@@ -10,24 +10,15 @@ import vegetable from "../../assets/pictures/vegetable.svg";
 import styles from "./Recipe.module.css";
 
 import RecipePicture from "./RecipePicture";
-// import recipePicture from "../../assets/recipes/soupeDeglincoco.jpg";
 
 export default function Recipe() {
   const location = useLocation();
   const { currentRecipe } = location.state;
-  // const Picture = require(currentRecipe.illustration)
-
 
   return (
     <div className={styles.recipeContainer}>
       <h1>{currentRecipe.name}</h1>
-      <RecipePicture img={currentRecipe.illustration} />
-        {/* <img
-          src={Picture}
-          className="recipePicture"
-          alt={currentRecipe.name}
-        /> */}
-        {/* <img src={require("../../assets/recipes/soupeDeglincoco.jpg")} /> */}
+      <RecipePicture name={currentRecipe.lowerCaseName} />
       <div className={styles.recipeDetails}>
         {currentRecipe.isQuick && (
           <div>
