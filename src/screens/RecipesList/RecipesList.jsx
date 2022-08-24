@@ -9,6 +9,7 @@ export default function RecipesList() {
   const [vegetarianOnly, setVegetarianOnly] = useState(false);
   const [quickOnly, setQuickOnly] = useState(false);
   const [tuppableOnly, setTuppableOnly] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     let newDisplayedRecipes = recipes;
@@ -27,12 +28,24 @@ export default function RecipesList() {
         (recipe) => recipe.isTuppable === true
       );
     }
+    newDisplayedRecipes = newDisplayedRecipes.filter((recipe) => {
+      return recipe.name.toLowerCase().includes(search.toLowerCase());
+    });
     setDisplayedRecipes(newDisplayedRecipes);
-  }, [vegetarianOnly, quickOnly, tuppableOnly]);
+  }, [search, vegetarianOnly, quickOnly, tuppableOnly]);
 
   return (
     <div className={styles.recipesContainer}>
       <h1>Welcome to the recipes list</h1>
+      <div className={styles.optionsSelector}>
+        <label htmlFor="title">Nom</label>
+        <input
+          type="text"
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+        ></input>
+        <button onClick={() => setSearch("")}>Effacer</button>
+      </div>
       <div className={styles.optionsSelector}>
         <label htmlFor="vegetarian">Vegetarien</label>
         <input
