@@ -18,20 +18,20 @@ export default function Devtools() {
         Trello
       </a>
       <div className={styles.boxContainer}>
-        <div className={styles.box} style={{ backgroundColor: "#ADBCA5" }}>
+        <div className={styles.box} style={{ backgroundColor: "#f6fff8" }}>
+          X LIGHT GREEN
+        </div>
+        <div className={styles.box} style={{ backgroundColor: "#eaf4f4" }}>
+          LIGHT GREEN
+        </div>
+        <div className={styles.box} style={{ backgroundColor: "#cce3de" }}>
           GREEN
         </div>
-        <div className={styles.box} style={{ backgroundColor: "#E8B9AB" }}>
-          MELON
+        <div className={styles.box} style={{ backgroundColor: "#a4c3b2" }}>
+          DARK GREEN
         </div>
-        <div className={styles.box} style={{ backgroundColor: "#E09891" }}>
-          PINK
-        </div>
-        <div className={styles.box} style={{ backgroundColor: "#CB769E" }}>
-          ORCHID
-        </div>
-        <div className={styles.box} style={{ backgroundColor: "#8C5F66" }}>
-          MAUVE
+        <div className={styles.box} style={{ backgroundColor: "#6b9080" }}>
+          X DARK GREEN
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 @import '../../Fonts.css';
 
 .header {
-  background-color: var(--orchid);
+  background-color: var(--dark-green);
   display: flex;
   justify-content: space-between;
   align-items: center;

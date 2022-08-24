@@ -1,7 +1,7 @@
 @import "../../Fonts.css";
 
 .recipeContainer {
-  background-color: var(--pink);
+  background-color: var(--green);
   width: 80vw;
   padding: 25px 50px;
   margin: 0 auto;

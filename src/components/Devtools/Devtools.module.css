@@ -1,7 +1,7 @@
 @import "../../Fonts.css";
 
 .banner {
-  background-color: rebeccapurple;
+  background-color: var(--x-dark-green);
   display: flex;
   justify-content: space-between;
   align-items: center;

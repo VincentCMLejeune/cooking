@@ -1,7 +1,7 @@
 @import "./Fonts.css";
 
 body {
-  background-color: var(--melon);
+  background-color: var(--light-green);
   margin: 0;
   padding: 0;
 }

@@ -2,7 +2,7 @@
 
 .homeToolBarContainer {
   width: 100%;
-  background-color: var(--green);
+  background-color: var(--x-light-green);
   margin: 0 auto;
   height: 32px;
 }
