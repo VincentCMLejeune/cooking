@@ -1,0 +1,8 @@
+@import "../../Fonts.css";
+
+.homeToolBarContainer {
+  width: 100%;
+  background-color: var(--green);
+  margin: 0 auto;
+  height: 32px;
+}
