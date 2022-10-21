@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Devtools from "./components/Devtools/Devtools";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Home from "./screens/Home/Home";
 import Recipe from "./screens/Recipe/Recipe";
 import RecipesList from "./screens/RecipesList/RecipesList";
 import Suggestion from "./screens/Suggestion/Suggestion";
@@ -20,8 +19,7 @@ export default function App() {
         <Header />
         {showDevTools && <Devtools />}
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/recipes" element={<RecipesList />} />
+          <Route exact path="/" element={<RecipesList />} />
           <Route path="/recipe/*" element={<Recipe />} />
           <Route path="/suggestion" element={<Suggestion />} />
         </Routes>
