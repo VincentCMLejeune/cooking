@@ -22,17 +22,16 @@ export default function Recipe() {
     }
   }, []);
 
-  
   return (
     <>
       {currentRecipe && (
         <div className={styles.recipeContainer}>
-          <h1>{currentRecipe.name}</h1>
           <img
             src={require(`../../assets/recipes/${currentRecipe.lowerCaseName}.jpg`)}
             alt={currentRecipe}
             className={styles.recipePicture}
           />
+          <h1>{currentRecipe.name}</h1>
           <div className={styles.recipeDetails}>
             {currentRecipe.isQuick && (
               <div>

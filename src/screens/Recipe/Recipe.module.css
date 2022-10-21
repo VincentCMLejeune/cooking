@@ -2,9 +2,9 @@
 
 .recipeContainer {
   background-color: var(--green);
-  width: 80vw;
-  padding: 25px 50px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 80px 0 0 0;
+  font-family: var(--second-font-family);
 }
 
 .recipeContainer h1 {
@@ -13,7 +13,7 @@
 }
 
 .recipeDetails {
-  width: 45vw;
+  width: 100%;
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
@@ -24,8 +24,18 @@
   margin-right: 5px;
 }
 
+@media (min-width: 768px) {
+  .recipeIngredientsAndProcess {
+    flex-direction: row;
+  }
+  .recipeProcess {
+    width: 60vw;
+  }
+}
+
 .recipeIngredientsAndProcess {
   display: flex;
+  flex-direction: column;
 }
 
 .recipeIngredientsAndProcess h2 {
@@ -34,8 +44,13 @@
 }
 
 .recipeProcess {
-  width: 60vw;
-  margin: 0;
+  font-size: 18px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.recipeProcess ol li {
+  margin: 5px 0;
 }
 
 .recipePictureContainer {
@@ -47,8 +62,16 @@
   margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+  .recipePicture {
+    width: 200px;
+  }
+}
+
 .recipePicture {
-  border: 2px solid red;
-  /* width: 200px; */
-  height: 200px;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  margin: 0 auto;
 }
