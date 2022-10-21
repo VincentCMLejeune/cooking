@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { recipes } from "../../recipesData/recipesData";
 
 import Ingredients from "../../components/Ingredients/Ingredients";
 
@@ -9,51 +9,67 @@ import vegetable from "../../assets/pictures/vegetable.svg";
 
 import styles from "./Recipe.module.css";
 
-import RecipePicture from "./RecipePicture";
-
 export default function Recipe() {
-  const location = useLocation();
-  const { currentRecipe } = location.state;
+  const [currentRecipe, setCurrentRecipe] = useState(null);
 
+  useEffect(() => {
+    const urlRecipe = window.location.pathname.split("/recipe/")[1];
+    const foundRecipe = recipes.find(
+      (recipe) => recipe.lowerCaseName === urlRecipe
+    );
+    if (foundRecipe) {
+      setCurrentRecipe(foundRecipe);
+    }
+  }, []);
+
+  
   return (
-    <div className={styles.recipeContainer}>
-      <h1>{currentRecipe.name}</h1>
-      <RecipePicture name={currentRecipe.lowerCaseName} />
-      <div className={styles.recipeDetails}>
-        {currentRecipe.isQuick && (
-          <div>
-            <img src={clock} alt="rapide" />
-            Rapide
+    <>
+      {currentRecipe && (
+        <div className={styles.recipeContainer}>
+          <h1>{currentRecipe.name}</h1>
+          <img
+            src={require(`../../assets/recipes/${currentRecipe.lowerCaseName}.jpg`)}
+            alt={currentRecipe}
+            className={styles.recipePicture}
+          />
+          <div className={styles.recipeDetails}>
+            {currentRecipe.isQuick && (
+              <div>
+                <img src={clock} alt="rapide" />
+                Rapide
+              </div>
+            )}
+            {currentRecipe.isTuppable && (
+              <div>
+                <img src={lunch} alt="tuppable" />
+                Tuppable
+              </div>
+            )}
+            {currentRecipe.isVegetarian && (
+              <div>
+                <img src={vegetable} alt="végétarien" />
+                Végétarien
+              </div>
+            )}
           </div>
-        )}
-        {currentRecipe.isTuppable && (
-          <div>
-            <img src={lunch} alt="tuppable" />
-            Tuppable
-          </div>
-        )}
-        {currentRecipe.isVegetarian && (
-          <div>
-            <img src={vegetable} alt="végétarien" />
-            Végétarien
-          </div>
-        )}
-      </div>
-      <div className={styles.recipeIngredientsAndProcess}>
-        <Ingredients
-          persons={currentRecipe.basePersonsIngredients}
-          ingredients={currentRecipe.ingredients}
-        />
+          <div className={styles.recipeIngredientsAndProcess}>
+            <Ingredients
+              persons={currentRecipe.basePersonsIngredients}
+              ingredients={currentRecipe.ingredients}
+            />
 
-        <div className={styles.recipeProcess}>
-          <h2>Etapes</h2>
-          <ol>
-            {currentRecipe.recipe.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
+            <div className={styles.recipeProcess}>
+              <h2>Etapes</h2>
+              <ol>
+                {currentRecipe.recipe.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
