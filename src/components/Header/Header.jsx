@@ -6,14 +6,11 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <Link to="/">
+    <Link to="/" style={{ textDecoration: "none" }}>
+      <div className={styles.header}>
         <img src={pizzaLogo} className={styles.headerLogo} alt="Logo" />
-      </Link>
-      <h1>LES RECETTES DU OINK</h1>
-      <Link to="/recipes">
-        <div>Toutes les recettes</div>
-      </Link>
-    </div>
+        <h1>LES RECETTES DU OINK</h1>
+      </div>
+    </Link>
   );
 }
