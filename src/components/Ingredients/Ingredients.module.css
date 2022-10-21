@@ -1,14 +1,18 @@
 @import "../../Fonts.css";
 
 .ingredientsContainer {
-  width: 20vw;
+  width: 100%;
   margin: 0;
-  border: 1px solid red;
+  font-family: var(--second-font-family);
+}
+
+.ingredientsContainer h2 {
+  margin-bottom: 5px;
 }
 
 .personList {
   display: flex;
-  width: 20vw;
+  width: 100%;
   justify-content: center;
 }
 
@@ -20,4 +24,45 @@
 .ingredientsError {
   color: white;
   background-color: red;
+}
+
+.personsInput {
+  width: 75%;
+  margin: 5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.personsInputValue {
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: green;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--second-font-family);
+  font-weight: 600;
+}
+
+.personsInput button {
+  height: 40px;
+  width: 80px;
+  border: 2px solid green;
+  color: green;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--second-font-family);
+  font-weight: 600;
+  background-color: var(--x-light-green);
+}
+
+.ingredientsContainer ul li {
+  font-size: 18px;
 }

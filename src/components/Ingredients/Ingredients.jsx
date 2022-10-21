@@ -12,14 +12,6 @@ export default function Ingredients(props) {
   const [currentPersons, setCurrentPersons] = useState(persons);
   const [showError, setShowError] = useState(false);
 
-  const handleChange = (e) => {
-    if (e.target.value > 0) {
-      setCurrentPersons(e.target.value);
-    } else {
-      setShowError(true);
-    }
-  };
-
   useEffect(() => {
     let newPictures = [];
     if (currentPersons > 10) {
@@ -40,12 +32,12 @@ export default function Ingredients(props) {
   useEffect(() => {
     setTimeout(function () {
       setShowError(false);
-    }, 3000);
+    }, 2000);
   }, [showError]);
 
   return (
     <div className={styles.ingredientsContainer}>
-      <h2>Ingredients</h2>
+      <h2>Ingredients pour</h2>
       <div className={styles.personList}>
         {picutres.map((picture, index) => (
           <div key={index} className={styles.personPicture}>
@@ -53,13 +45,20 @@ export default function Ingredients(props) {
           </div>
         ))}
       </div>
-      <div>
-        <input
-          type="number"
-          value={currentPersons}
-          onChange={(e) => handleChange(e)}
-        />{" "}
-        personnes
+      <div className={styles.personsInput}>
+        <button
+          onClick={() =>
+            currentPersons > 1
+              ? setCurrentPersons(currentPersons - 1)
+              : setShowError(true)
+          }
+        >
+          -1
+        </button>
+        <div className={styles.personsInputValue}>{currentPersons}</div>
+        <button onClick={() => setCurrentPersons(currentPersons + 1)}>
+          +1
+        </button>
       </div>
       {showError && (
         <em className={styles.ingredientsError}>
