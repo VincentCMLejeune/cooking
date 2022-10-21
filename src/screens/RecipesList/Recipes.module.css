@@ -1,7 +1,71 @@
-@import '../../Fonts.css';
+@import "../../Fonts.css";
 
 .recipesContainer {
   color: green;
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
+}
+
+.recipesSearchInput {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+.recipesSearchInput input {
+  font-size: 18px;
+}
+
+.recipesSearchInput img {
+  height: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.recipesParamsSelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 10px 5%;
+}
+
+.recipesParam {
+  height: 30px;
+  width: 30%;
+  border: 2px solid green;
+  color: var(--dark-green);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--second-font-family);
+  font-weight: 600;
+  background-color: var(--x-light-green);
+}
+
+#recipesParamSelected {
+  color: var(--x-light-green);
+  background-color: green;
+}
+
+.recipesList {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipesListElement {
+  font-size: 20px;
+  font-family: var(--second-font-family);
+  font-weight: 500;
+  color: green;
+  padding: 10px;
+  border: 1px solid green;
+  border-radius: 5px;
+  margin: 2px 0;
 }

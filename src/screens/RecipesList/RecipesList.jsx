@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { recipes } from "../../recipesData/recipesData";
 
+import crossBlack from "../../assets/crossBlack.svg";
+
 import styles from "./Recipes.module.css";
 
 export default function RecipesList() {
-  const [displayedRecipes, setDisplayedRecipes] = useState(recipes);
+  const [displayedRecipes, setDisplayedRecipes] = useState(null);
   const [vegetarianOnly, setVegetarianOnly] = useState(false);
   const [quickOnly, setQuickOnly] = useState(false);
   const [tuppableOnly, setTuppableOnly] = useState(false);
@@ -31,52 +33,59 @@ export default function RecipesList() {
     newDisplayedRecipes = newDisplayedRecipes.filter((recipe) => {
       return recipe.name.toLowerCase().includes(search.toLowerCase());
     });
-    setDisplayedRecipes(newDisplayedRecipes);
+    setDisplayedRecipes(
+      newDisplayedRecipes.sort((a, b) => a.name.localeCompare(b.name))
+    );
   }, [search, vegetarianOnly, quickOnly, tuppableOnly]);
 
   return (
-    <div className={styles.recipesContainer}>
-      <h1>Welcome to the recipes list</h1>
-      <div className={styles.optionsSelector}>
-        <label htmlFor="title">Nom</label>
-        <input
-          type="text"
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
-        ></input>
-        <button onClick={() => setSearch("")}>Effacer</button>
-      </div>
-      <div className={styles.optionsSelector}>
-        <label htmlFor="vegetarian">Vegetarien</label>
-        <input
-          type="checkbox"
-          onChange={(e) => setVegetarianOnly(!vegetarianOnly)}
-        ></input>
-      </div>
-      <div className={styles.optionsSelector}>
-        <label htmlFor="vegetarian">Rapide</label>
-        <input
-          type="checkbox"
-          onChange={(e) => setQuickOnly(!quickOnly)}
-        ></input>
-      </div>
-      <div className={styles.optionsSelector}>
-        <label htmlFor="vegetarian">Tuppable</label>
-        <input
-          type="checkbox"
-          onChange={(e) => setTuppableOnly(!tuppableOnly)}
-        ></input>
-      </div>
-
-      {displayedRecipes.map((recipe) => (
-        <Link
-          to={`/recipe/${recipe.lowerCaseName}`}
-          key={recipe.key}
-          state={{ currentRecipe: recipe }}
-        >
-          {recipe.name}
-        </Link>
-      ))}
-    </div>
+    <>
+      {displayedRecipes && (
+        <div className={styles.recipesContainer}>
+          <div className={styles.recipesSearchInput}>
+            <input
+              type="text"
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
+            ></input>
+            <img onClick={() => setSearch("")} src={crossBlack} alt="Delete" />
+          </div>
+          <div className={styles.recipesParamsSelector}>
+            <div
+              className={styles.recipesParam}
+              onClick={() => setVegetarianOnly(!vegetarianOnly)}
+              id={vegetarianOnly ? styles.recipesParamSelected : null}
+            >
+              VEGE
+            </div>
+            <div
+              className={styles.recipesParam}
+              onClick={() => setQuickOnly(!quickOnly)}
+              id={quickOnly ? styles.recipesParamSelected : null}
+            >
+              RAPIDE
+            </div>
+            <div
+              className={styles.recipesParam}
+              onClick={() => setTuppableOnly(!tuppableOnly)}
+              id={tuppableOnly ? styles.recipesParamSelected : null}
+            >
+              TUPP
+            </div>
+          </div>
+          <div className={styles.recipesList}>
+            {displayedRecipes.map((recipe) => (
+              <Link
+                to={`/recipe/${recipe.lowerCaseName}`}
+                key={recipe.key}
+                style={{ textDecoration: "none" }}
+              >
+                <div className={styles.recipesListElement}>{recipe.name}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
