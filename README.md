@@ -1,7 +1,5 @@
 # Cooking Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Features
 
 You have awesome filters to search for your recipe :
@@ -11,8 +9,14 @@ vege
 light
 quick
 
-Catégorie
-plat
-dessert
-gouter
-cocktails
+## Installation
+
+```bash
+npm install
+```
+
+## Launch the project
+
+```bash
+npm start
+```
