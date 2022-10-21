@@ -12,6 +12,14 @@
   position: fixed;
   bottom: 0;
 }
+
+
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+}
+
 .footer button {
   font-size: 18px;
   background-color: var(--x-dark-green);
