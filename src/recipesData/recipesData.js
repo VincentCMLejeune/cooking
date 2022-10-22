@@ -321,6 +321,31 @@ const recipes = [
     isQuick: false,
     isTuppable: false,
   },
+  {
+    name: "Pates carbo",
+    lowerCaseName: "patescarbo",
+    key: 13,
+    ingredients: [
+      [400, "gr pâtes"],
+      [3, "oeufs"],
+      [3, "jaunes d'oeufs"],
+      [150, "gr pancetta"],
+      [120, "gr parmesan"],
+      ["poivre"],
+      ["sel"],
+    ],
+    basePersonsIngredients: 3,
+    recipe: [
+      "Couper la pancetta en lardons. Les mettre dans une poêle et les faire cuire à feu moyen/doux durant quelques minutes. Le gras doit fondre et les lardons doivent légèrement croustiller.",
+      "Faire cuire les pâtes dans un grand volume d'eau légèrement salée conformément aux instructions du paquet. ",
+      "Pendant ce temps, battre les œufs (entiers + les jaunes d'oeufs) dans un grand récipient et ajouter 2/3 du pecorino ou parmesan râpé. Saler légèrement et poivrer.",
+      "Égoutter les pâtes en conservant 2 à 3 CS d'eau de cuisson dans un petit récipient.",
+      "Ajouter ensuite la pancetta, un peu de pecorino râpé et rectifier l'assaisonnement en sel mais surtout en poivre.",
+    ],
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: true,
+  },
 ];
 
 module.exports = { recipes };
