@@ -346,6 +346,31 @@ const recipes = [
     isQuick: false,
     isTuppable: true,
   },
+  {
+    name: "Salade poulet bacon",
+    lowerCaseName: "saladepouletbacon",
+    key: 14,
+    ingredients: [
+      [3, "escalopes de poulet"],
+      [4, "tranches de bacon"],
+      [2, "échalottes"],
+      [1, "oignon rose"],
+      [1, "roquette"],
+      [3, "c.à.s. vinaigre balsamique"],
+      [1, "c.à.s. miel"],
+      ["ail"],
+      ["huile d'olive"],
+    ],
+    basePersonsIngredients: 2,
+    recipe: [
+      "Emincer le poulet en fines lamelles. Les disposer dans une assiette en arrosant d'huile d'olive et en ajoutant l'ail écrasé et u frigo pour au moins une heure.",
+      "Faire revenir au wok ou dans une poele le gros oignon et les échalotes avec l'huile d'olive. Y ajouter le poulet puis le bacon coupé en fines lamelles.",
+      "Ajouter alors le miel pour faire caraméliser le tout et enfin le vinaigre. Saisir le tout vivement et verser sur des assiettes garnies de roquette. La salade est naturellement assaisonnée par la sauce du plat.",
+    ],
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: false,
+  },
 ];
 
 module.exports = { recipes };
