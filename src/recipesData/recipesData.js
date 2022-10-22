@@ -371,6 +371,30 @@ const recipes = [
     isQuick: false,
     isTuppable: false,
   },
+  {
+    name: "Nuggets",
+    lowerCaseName: "nuggets",
+    key: 15,
+    ingredients: [
+      [450, "gr blanc de poulet"],
+      [20, "cl lait"],
+      [75, "gr farine"],
+      [2, "c.à.c piment"],
+      [1, "c.à.c curry"],
+      [1, "c.à.c cumin"],
+      [1, "c.à.c muscade"],
+    ],
+    basePersonsIngredients: 2,
+    recipe: [
+      "Couper les blancs en gros dés.",
+      "Mélanger les différentes épices et la farine dans un saladier. ",
+      "Faire tremper les morceaux de poulet dans un bol de lait puis les rouler dans le mélange épices / farine.",
+      "Disposer les morceaux dans une poêle chaude et huilée, saler.",
+    ],
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: false,
+  },
 ];
 
 module.exports = { recipes };
