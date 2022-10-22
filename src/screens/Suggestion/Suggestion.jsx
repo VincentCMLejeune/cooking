@@ -51,6 +51,19 @@ export default function Suggestion() {
     setSteps(steps.filter((step, index) => index !== indexToRemove));
   };
 
+  const restoreRecipe = () => {
+    setTitle("");
+    setIngredients([]);
+    setCurrentIngredient("");
+    setPersons(0);
+    setSteps([]);
+    setCurrentStep("");
+    setVegetarian(false);
+    setQuick(false);
+    setTuppable(false);
+    setJson(undefined);
+  };
+
   const createJson = () => {
     let newJson = {};
 
@@ -155,6 +168,7 @@ export default function Suggestion() {
       </div>
       <button onClick={createJson}>CREER LA RECETTE</button>
       {json && <div className={styles.jsonToCopy}>{json}</div>}
+      <button onClick={restoreRecipe}>EFFACER LA RECETTE</button>
     </div>
   );
 }
