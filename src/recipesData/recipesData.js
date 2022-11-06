@@ -459,6 +459,32 @@ const recipes = [
     isQuick: false,
     isTuppable: true,
   },
+  {
+    name: "Croque-monsieur",
+    lowerCaseName: "croquemonsieur",
+    key: 18,
+    ingredients: [
+      [4, "tranches de pain de mie"],
+      [25, "gr de beurre tendre"],
+      [50, "gr de gruyère râpé"],
+      [2, "c.à.s. de lait"],
+      [0.5, "pincée de muscade"],
+      [2, "tranches de jambon"],
+      [4, "tranches de cheddar"],
+      ["sel"],
+      ["poivre"],
+    ],
+    basePersonsIngredients: 2,
+    recipe: [
+      "Beurrez les tranches de pain de mie sur une seule face. Posez 1 tranche de fromage sur chaque tranche de pain de mie. Posez 1 tranche de jambon plié en deux sur 4 tranches de pain de mie. Recouvrez avec les autres tartines (face non beurrée au dessus). ",
+      "Dans un bol mélanger le fromage râpé avec le lait, le sel, le poivre et la muscade.",
+      "Répartissez le mélange sur les croque-monsieur.",
+      "Placez sur une plaque au four sous le grill pendant 10 mn.",
+    ],
+    isVegetarian: false,
+    isQuick: true,
+    isTuppable: true,
+  },
 ];
 
 module.exports = { recipes };
