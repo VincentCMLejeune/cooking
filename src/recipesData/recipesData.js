@@ -431,6 +431,34 @@ const recipes = [
     isQuick: false,
     isTuppable: true,
   },
+  {
+    name: "Quiche lorraine",
+    lowerCaseName: "quichelorraine",
+    key: 17,
+    ingredients: [
+      [200, "gr pâte brisée"],
+      [200, "gr lardons"],
+      [20, "cl crème fraîche"],
+      [20, "cl lait"],
+      [3, "oeufs"],
+      ["muscade"],
+      ["sel"],
+      ["poivre"],
+    ],
+    basePersonsIngredients: 4,
+    recipe: [
+      "Préchauffer le four à 180°C (thermostat 6). Etaler la pâte dans un moule et la piquer à la fourchette.",
+      "Faire rissoler les lardons à la poêle puis les éponger avec une feuille d'essuie-tout.",
+      "Battre les oeufs, la crème fraîche et le lait.",
+      "Ajouter les lardons.",
+      "Assaisonner de sel, de poivre et de muscade. ",
+      "Verser sur la pâte.",
+      "Cuire 45 à 50 min.",
+    ],
+    isVegetarian: false,
+    isQuick: false,
+    isTuppable: true,
+  },
 ];
 
 module.exports = { recipes };
