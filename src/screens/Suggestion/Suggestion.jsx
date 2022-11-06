@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import styles from "./Suggestion.module.css";
 import { recipes } from "../../recipesData/recipesData";
+import { useEffect } from "react";
 
 export default function Suggestion() {
   const [title, setTitle] = useState("");
@@ -91,10 +92,14 @@ export default function Suggestion() {
     }
 
     setJson(JSON.stringify(newJson));
-
-    navigator.clipboard.writeText(json);
-    alert("Recette ajoutée dans le presse papiers !");
   };
+
+  useEffect(() => {
+    if (json) {
+      navigator.clipboard.writeText(json);
+      alert("Recette ajoutée dans le presse papiers !");
+    }
+  }, [json]);
 
   return (
     <div className={styles.suggestionContainer}>
