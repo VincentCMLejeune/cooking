@@ -4,7 +4,7 @@
   background-color: var(--dark-green);
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 32px;
   width: 98vw;
@@ -27,6 +27,7 @@
   border-radius: 25px;
   padding: 0 10px;
   font-weight: 700;
+  margin: 0 20px;
 }
 .footer button:hover {
   cursor: pointer;
