@@ -351,7 +351,7 @@ const recipes = [
     lowerCaseName: "saladepouletbacon",
     key: 14,
     ingredients: [
-      [3, "escalopes de poulet"],
+      [2, "escalopes de poulet"],
       [4, "tranches de bacon"],
       [2, "échalottes"],
       [1, "oignon rose"],
